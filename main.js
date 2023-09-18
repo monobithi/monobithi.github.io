@@ -23,3 +23,15 @@ const nav = document.querySelector('.dropdown-menu')
 nav.querySelectorAll(`li a`).forEach(navLink => {
     navLink.addEventListener('click', toggleBtn.onclick);
 })
+
+//when archive menu option is clicked
+const arc_clk = document.querySelector('.archive_click');
+const submenu = document.querySelector('.submenu');
+const menu = document.querySelector('.dropdown-menu')
+const gap = document.querySelector('.gap')
+
+arc_clk.onclick = function() {
+    submenu.classList.toggle('open')
+    menu.classList.toggle('openup')
+    gap.classList.toggle('openup')
+}
