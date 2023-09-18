@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;600&family=Raleway:wght@500&display=swap');
 
 html, body{
     margin:0;
     padding: 0;
     box-sizing: border-box;
     width: min(750px, 100vw);
-    height: 100dvh;
+    height: 100vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
-nav li {
+nav{
     list-style: none;
 }
 
-nav a {
+nav .menu {
     position: relative;
+    left: 15%;
     text-decoration: none;
     color: #fff;
     font-family: 'Alex Brush';
@@ -24,30 +26,27 @@ nav a {
     transition: .5s ease;
     font-size: 1.7rem;
     font-weight: 600;
+    padding-bottom: 1rem;
 }
 
-nav li a span{
+nav .menu span{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: #fff;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     z-index: -1;
     transform: scale(0);
     opacity: 0;
     transition: .5s ease;
 }
 
-nav a:hover{
-    color: black;
-}
-
-nav a:hover span{
-    transform: scale(1.1); /* TODO have to fix it */
+nav .menu:hover span{
+    transform: scale(1);
     opacity: 1;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .3);
+    /* box-shadow: 0 1rem 1rem rgba(0, 0, 0, .3); */
 }
 
 nav{
@@ -74,7 +73,11 @@ nav{
 
 .gap{
     width: 100%;
-    height: 100px;
+    height: 7%;
+}
+
+.gap.openup {
+    height: 5%;
 }
 
 /* nav class on scroll using javascript */
@@ -87,24 +90,50 @@ nav{
 .dropdown-menu{
     display: block;
     position: absolute;
-    left: -70%;
-    top: 0;
-    height: 100vh;
-    width: 0;
+    left: 2%;
+    top: 100%;
+    height: 0;
+    width: 40%;
     background: beige;
-    border-radius: 0 12px 12px 0;
+    border-radius: 12px 12px 12px 12px;
     overflow: hidden;
     z-index: -2;
     transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown-menu li a{
+.dropdown-menu .menu{
+    cursor: pointer;
+    width: 100%;
     color: #000;
 }
 
+.dropdown-menu .submenu{
+    display: none;
+    position: relative;
+    left: 30%;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Alex Brush';
+    font-size: 1rem;
+    transition: .5s ease;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    transition: 200ms ease-in-out;
+}
+
+.dropdown-menu .submenu.open{
+    display: block;
+    transition: 200ms ease-in-out;
+}
+
 .dropdown-menu.open {
-    width: 70%;
-    left: 0;
+    height: 230%;
+    box-shadow: 1rem 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu.openup {
+    height: 520%;
     box-shadow: 1rem 0 5rem rgba(0, 0, 0, 0.5);
 }
 
@@ -159,9 +188,26 @@ nav{
     padding-bottom: 0.5rem;
 }
 
+.writeup{
+    position: relative;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    /* padding-bottom: 2rem; */
+    text-align: justify;
+    font-family: 'Montserrat';
+}
+
+.writeup .scrollpage-heading{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    font-family: 'Alex Brush';
+    font-size: 2rem;
+}
+
 .scrollpage{
     max-width: 100%;
-    height: 45%;
+    height: 35%;
     position: relative;
     display: flex;
     gap: clamp(1rem, 2vw, 2rem);
@@ -178,6 +224,7 @@ nav{
 }
 
 .subscription {
+    top: 7%;
     position: relative;
     padding: 0 50px;
     text-align: center;
