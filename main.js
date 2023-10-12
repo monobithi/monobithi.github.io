@@ -35,3 +35,10 @@ arc_clk.onclick = function() {
     menu.classList.toggle('openup')
     gap.classList.toggle('openup')
 }
+
+const _menu = document.querySelectorAll('.menu');
+_menu.forEach(element => {
+    element.addEventListener('click', () => {
+        location.href = `${element.textContent}.html`;
+    })
+})
