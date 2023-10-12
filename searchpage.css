@@ -44,7 +44,7 @@
 }
 .container .images .image-box{
     position: relative;
-    height: 300px;
+    height: fit-content;
     width: 40%;
     border-radius: 6px;
     overflow: hidden;
