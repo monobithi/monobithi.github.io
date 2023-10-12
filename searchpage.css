@@ -46,7 +46,6 @@
 }
 .container .images .image-box{
     position: relative;
-    height: fit-content;
     width: 40%;
     border-radius: 6px;
     overflow: hidden;
@@ -61,8 +60,9 @@
     margin: 8px;
 }
 .images .image-box img{
-    height: 100%;
-    width: 100%;
+    object-fit: contain;
+/*     height: 100%;
+    width: 100%; */
     border-radius: 6px;
     transition: transform 0.2s linear;
 }
