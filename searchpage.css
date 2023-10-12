@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
 *, body{
     width: 100%;
     margin: 0;
@@ -74,7 +75,7 @@
     left: 10px;
     color: black;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 800;
     text-transform: capitalize;
-    font-family: 'Young Sherif';
+    font-family: 'Autour One';
 }
