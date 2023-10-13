@@ -80,3 +80,14 @@
     text-transform: capitalize;
     font-family: 'Autour One';
 }
+.image-box h7{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: blue;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: capitalize;
+    font-family: 'Autour One';
+}
+
