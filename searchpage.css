@@ -50,6 +50,7 @@
     width: 40%;
     border-radius: 6px;
     overflow: hidden;
+    cursor: pointer;
 }
 .images{
     width: 100%;
