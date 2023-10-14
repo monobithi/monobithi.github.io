@@ -20,3 +20,11 @@ search.addEventListener("keyup", () =>{
         image.style.display = "block";
     })
 })
+
+
+const pdf = document.querySelectorAll('.image-box');
+pdf.forEach(element => {
+    element.addEventListener('click', () => {
+        location.href = `${element.querySelector('h6').textContent}.html`;
+    })
+})
