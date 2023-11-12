@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Monobithi - Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="actions.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="assets/monobithi_logo_nobg.png">
+                <h1>MONOBiTHi</h1>
+                <p>The Meanderings of Imagination</p>
+            </div>
+            <div class="navbar">
+                <a href="#latest">Home</a>
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#team">Team</a>
+                <a href="https://forms.gle/yK2V45gkhC3VAC3Q9">Subscribe</a>
+            </div>
+        </div>   
+        <div class="latest" id="latest">
+            <h2>Latest From Our Basket</h2>
+        </div>     
+        <div class="main" id="main">
+            <div class="invite">
+                <p>Hello voyager,</p>
+                <p>Welcome aboard on the ship — your very own Monobithi !!! You must’ve had a hard journey out there in the cold, harsh world, but don’t you worry ! You’ve hit the right place ! Time flows differently here, my friend. No hurries, no worries, just take your time and explore the new world that you’ve entered. And don’t forget to enjoy yourself in the process, for here enjoyment is mandatory and it comes for free !!! Then buckle up, and prepare yourself for a ride on the rollercoaster of imagination !! And don’t get lost on your exploration (there’s an explorer’s guide in the menu to help you out). It’s a long way and we hope you have a wonderful experience as you let your mind flow, for Monobithi is nothing but ‘The Meanderings of Imagination’ !!!</p>
+            </div>
+            <div class="slideshow">
+                <script src="actions.js"></script>
+                <img class="posters" src="assets/Sharat 23 Cover Insta PR.jpg">
+                <img class="posters" src="assets/Kaler Mondira Poster.jpg">
+                <img class="posters" src="assets/নারায়ণী নমোস্তুতে PR Posters (3).jpg">
+                <img class="posters" src="assets/Clive House Poster.jpg">
+                <img class="posters" src="assets/Shubho Bijoya_Ben.jpg">
+                <img class="posters" src="assets/Shubho Bijoya_Eng.jpg">
+                <img class="posters" src="assets/Lokkhi Chana.jpg">
+                <!--<button class="slide-left" onclick="plusDivs(-1)">&#10094</button>
+                <button class="slide-right" onclick="plusDivs(+1)">&#10095</button>-->     
+            </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("posters");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 5000); // Change image every 2 seconds
+                }
+                </script>
+        </div>
+        <div class="about" id="about">
+            <h2>About</h2>
+            <p>You must be wondering now, what is Monobithi all about ? Hold on, we’ll give you the answer.</p>
+            <p>Monobithi is the place where imagination  runs wild. It is the place where you can be who you are — not the one others know you to be, but the actual ‘you’ — the child in you, who wants a break from the  world  around, who wants to do the things that you love to do, who wants to have some real, some really real fun. Well here is the place where this magic happens. Still confused?</p>
+            <p>Okay, let’s be more precise. Monobithi is an illustrated bilingual e-magazine,published twice a year , with a Spring and an Autumn  issue . This magazine is for children. And do note, not ‘children’ by age, but the tiny flicker of light that remains within us. Here,we  gather together to summon our creativity to the tip of our brush and the nib of our pen (and to all those other things which right now escapes my mind) and do whatever we feel like doing. We  are lovers of art. Heard of the phrase ‘Art for art’s sake’? Well, that’s the motto we passionately believe in. And since you’re here, you must do so too ! </p>
+            <p>Still here ? How did Monobithi come around, you ask… that is definitely an interesting question. We, fashionably called ‘The Editors’ are avid followers of Satyajit Ray, one of the greatest personalities to have walked on  earth. He to us is a teacher, a mentor, a guide and a friend … and we do all that we can to follow in his footsteps. His rejuvenated children’s magazine ‘Sandesh’ is the inspiration behind Monobithi. But that’s not all. Monobithi is our way of paying a small tribute to the man who taught us to live for art. Also … Hey ! We’ve been talking for quite a long time now. You should really start exploring, for there’s a lot to explore !</p>
+        </div>
+        <div class="publications" id="publications">
+            <h2>Publications</h2>
+            <div class="bg-image"></div>           
+            <table>
+                <tr>
+                    <td class="p1">
+                        <a href="https://drive.google.com/file/d/1BrutV845WEi-crZh65us-hZojbj_6x5L/view?usp=drive_link">
+                        <img src="assets/Vol 1.2 Cover.jpg">
+                        </a>
+                        <div class="pub-caption">Monobithi Vol 1.2 Sharat 2023</div>
+                    </td>
+                    <td class="p2">
+                        <a href="https://drive.google.com/file/d/1cRbWtl2iCMko8IdinpZT0tTlnrj87CrV/view?usp=drive_link">
+                        <img src="assets/Vol 1.1 Cover.jpg">
+                        </a>
+                        <div class="pub-caption">Monobithi Vol 1.1 Basanta 2023</div>
+                    </td>
+                </tr>
+                <!--<tr>
+                    <td class="pub-caption">Monobithi Vol 1.2 Sharat 2023</td>
+                    <td class="pub-caption">Monobithi Vol 1.1 Basanta 2023</td>
+                </tr>-->
+            </table>
+        </div>
+        <div class="team" id="team">
+            <h2>The Editors</h2>
+            <table>
+                <tr>
+                    <td width = 50%>
+                        <img src="assets/Aritra.jpg" class="photo1">
+                    </td>
+                    <td width = 5%></td>
+                    <td width = 50%>
+                        <img src="assets/Sumedha.jpg" class="photo2">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p class="name">Aritra Bandyopadhyay</p></td>
+                    <td width = 5%></td>
+                    <td><p class="name">Sumedha Ghosh Chowdhury</p></td>
+                </tr>
+                <tr>
+                    <td class="text" width = 50%>
+                        <p>Aritra can be called a painter, sculptor, pianist and photographer. He is a passionate listener of Hindustani Classical music alongside being a published author [two Bengali fictions : 'Durga Pujoy Ashur Nidhon' (2017) and 'Lukochuri' (2018)]. He believes Satyajit Ray to be his teacher or ‘guru’ in all fields, and his motto in life is “Art for art’s sake”.</p>
+                        <p>Education : Don Bosco School, Park Circus, Kolkata; 3rd Year BS-MS, Indian Institute of Science Education & Research (IISER), Mohali</p>
+                    </td>
+                    <td width = 5%></td>
+                    <td class="text" width = 50%>
+                        <p>Sumedha is interested in painting, singing, elocution and whatever comes her way. An occasional author of poems and short stories, she is more into being a critic, an avid reader and analyzer. She, too, is an ardent follower of Ray, and believes that Art is the food that keeps her alive.</p>
+                        <p>Education : Calcutta Girls High School, Kolkata; 2nd Year, BTech(EE), Jadavpur University, Kolkata</p>
+                    </td>
+                </tr>
+            </table>
+            <h2>The Associates</h2>
+            <table>
+                <tr>
+                    <td width = 50%>
+                        <img src="assets/Khushi.jpg" class="photo3">
+                    </td>
+                    <td width = 5%></td>
+                    <td width = 50%>
+                        <img src="assets/Rajarshi.jpg" class="photo4">
+                    </td>
+                </tr>
+                <tr>
+                    <td><p class="name">Khushi Bhattacharya</p></td>
+                    <td width = 5%></td>
+                    <td><p class="name">Rajarshi Mukherjee</p></td>
+                </tr>
+                <tr>
+                    <td class="text" width = 50%>
+                        <p>Khushi is a painter and an excellent Bharatnatyam dancer. Eager to absorb innovations. She is a regular performer in college theaters and a dedicated follower of Satyajit Ray.</p>
+                        <p>Education : Holy Child School, Jalpaiguri; 3rd Year BS-MS, Indian Institute of Science Education & Research (IISER), Mohali</p>
+                    </td>
+                    <td width = 5%></td>
+                    <td class="text" width = 50%>
+                        <p>Rajarshi is the one who expresses what he feels through his sharp witted poetry. A photographer and a regular and extensive reader, Rajarshi is an ardent critic of the three masters of Bengali Cinema (Rittwik Ghatak, Mrinal Sen and Satyajit Ray).</p>
+                        <p>Education : Don Bosco School, Park Circus, Kolkata; 3rd Year, BTech(ETCE), Jadavpur University, Kolkata</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width: 5%; text-align: right;">
+                        <img src="assets/gmail icon.png" style="width: 30px;">
+                    </td>
+                    <td style="width: 25%; text-align: left; padding-left: 7px;">
+                        <a href="mailto:editor.monobithi@gmail.com" style="color: white; text-decoration: none;"><i>editor.monobithi@gmail.com</i></a>
+                    </td>
+                    <td style="width: 40%;">
+                        <p>&copy All rights reserved. Team Monobithi, 2023.</p>
+                    </td>
+                    <td style="width: 25%; text-align: right; padding-right: 7px;">
+                        <a href="https://www.instagram.com/monobithi_magazine_official/" style="color: white; text-decoration: none;"><i>@monobithi_magazine_official</i></a>
+                    </td>
+                    <td style="width: 5%; padding-right: 10px; text-align: left;">
+                        <img src="assets/insta icon.png" style="width: 40px;">
+                    </td>
+                </tr>
+            </table>
+             
+        </div>
+    </body>
+</html>
