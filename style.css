@@ -71,13 +71,13 @@ h4{
     width: auto;
     float: left;
 }
-@media (max-width: 600px){
+/*@media (max-width: 600px){
     .logo{
         width: 100%;
     }
     .navbar{
         width: 100%;
-    }
+    }*/
 .logo h1{
     font-family: 'Cinzel Decorative';
     font-size: 2.3rem;
