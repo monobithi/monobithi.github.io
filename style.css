@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 html{
     scroll-behavior: smooth;
     background-image: url(assets/bengali\ alphabet_15.jpg);
@@ -95,32 +96,39 @@ h4{
 .main{
     padding: 10px;    
     padding-bottom: 20px;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    overflow-y: hidden;
+    flex-direction: row;
+    align-content: center;
+    /*flex-wrap: wrap;
+    overflow-y: hidden;*/
     scroll-behavior: smooth;
 }
 .invite{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 200px;
+    /*padding-right: 20px;
     padding-top: 50px;
-    /*flex: 50%;*/
+    display: flex;
+    flex-basis: 40%;
     float: left;
+    /*width: 50%;*/
+    /*font-family: 'Satisfy';
+    font-size: 1.2rem;*/
     width: 50%;
-    font-family: 'Satisfy';
-    font-size: 1.2rem;
     text-align: justify;
     vertical-align: middle;
-    background: blanchedalmond;
+    /*background: blanchedalmond;*/
     border-radius: 10px;
 }
 .slideshow{
-    width: 40%;
-    padding-left: 80px;
+    /*display: flex;
+    flex-basis: 40%;*/
+    padding-right: 200px;
+    width: 50%;
     align-items: center;
 }
 .posters{
-    width: 85%;
+    width: 100%;
     border-radius: 10px;
 }
 .about{
@@ -132,8 +140,8 @@ h4{
     background: linear-gradient(rgb(255, 255, 141), rgb(255, 255, 250));
 }
 .about p{
-    font-family: Ovo;
-    font-size: 16px;
+    font-family: 'Satisfy';
+    font-size: 1.3rem;
     text-align: justify;
 }
 .publications{
@@ -241,6 +249,15 @@ h4{
 .team .text{
     text-align: justify;
     padding: 5px;
+    font-family: 'Special Elite';
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.team .name{
+    font-family: 'Walter Turncoat';
+    font-size: 24px;
+    font-weight: 600;
 }
 .footer{
     background-color: black;
