@@ -11,11 +11,6 @@ html{
     background-size: contain;
     background-repeat: repeat-y;
 }
-.body{
-    margin: 0;
-    height: 100%;
-    
-}
 h2{
     font-family: Walter Turncoat;
     font-size: 48px;
@@ -37,6 +32,7 @@ h4{
     padding-bottom: 0px;
     top: 0;
     box-shadow: 0px 10px 15px #dadada;
+    overflow: hidden;
 }
 /*.navbar{
     position: relative;
@@ -48,13 +44,14 @@ h4{
 }*/
 .logo{
     float: left;
-    width: 40%;
+    width: 45%;
 }
 .navbar{
     width: 50%;
     padding-top: 30px;
     padding-right: 10px;
     font-family: 'Alex Brush';
+    overflow: hidden;
     font-size: 1.4rem;
 }
 .navbar a{
@@ -67,6 +64,10 @@ h4{
     text-align: center;
     text-decoration: none;    
 }
+/* Hide the link that should open and close the topnav on small screens */
+.navbar .icon {
+    display: none;
+  }
 .logo img{
     height: 120px;
     width: auto;
@@ -97,16 +98,15 @@ h4{
     padding: 10px;    
     padding-bottom: 20px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
     align-content: center;
     /*flex-wrap: wrap;
     overflow-y: hidden;*/
     scroll-behavior: smooth;
 }
-.invite{
-    padding-left: 200px;
-    /*padding-right: 20px;
+.invite{ 
+    padding-left: 50px;
+    /*  
+    padding-right: 20px;
     padding-top: 50px;
     display: flex;
     flex-basis: 40%;
@@ -114,18 +114,22 @@ h4{
     /*width: 50%;*/
     /*font-family: 'Satisfy';
     font-size: 1.2rem;*/
-    width: 50%;
-    text-align: justify;
-    vertical-align: middle;
+    width: 75%;
+    align-items: center;
+    vertical-align: bottom;
     /*background: blanchedalmond;*/
     border-radius: 10px;
+    padding-bottom: 50px;
 }
 .slideshow{
-    /*display: flex;
-    flex-basis: 40%;*/
-    padding-right: 200px;
-    width: 50%;
+    width: 75%;
+    padding-left: 50px;
+    /*flex-basis: 40%;
+    display: flex;
+    padding-right: 200px;*/
     align-items: center;
+    vertical-align: bottom;
+    padding-bottom: 50px;
 }
 .posters{
     width: 100%;
@@ -141,22 +145,26 @@ h4{
 }
 .about p{
     font-family: 'Satisfy';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: justify;
 }
 .publications{
+    width: 60%;
+    align-self: center;
     padding: 20px;  
     padding-top: 5px;  
     margin: auto;      
-    /*background-image: url(assets/bengali\ alphabet_15.jpg);
-    background-size: cover;*/
 }
-.publications table{
+.container-p{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     background: transparent;
+}
+.table-row{  
+    display:table-row;
+    text-align: center;
 }
 /*.publications .p1{
     margin: auto;
@@ -167,7 +175,7 @@ h4{
     width: 50%;
     padding-left: 20px;
 }*/
-.publications .p1 img{
+.p1 img{
     /*float: left;*/
     width: 90%;  
     border: 5px;      
@@ -176,7 +184,7 @@ h4{
     box-shadow: 5px;
     display: block;
 }
-.publications .p2 img{
+.p2 img{
     width: 90%;
     border: 5px;
     border-color: #dadada;
@@ -184,7 +192,8 @@ h4{
     box-shadow: 5px;
     display: block;
 }
-.publications td{
+.col-p{
+    display:table-cell;
     padding: 5px;
 }
 .pub-caption{
@@ -218,34 +227,6 @@ h4{
     background-repeat: no-repeat;
     
 }
-.team table{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    /*border: 10px;
-    background-image: url(assets/folded\ paper.png);
-    background-size: cover;*/
-}
-.team td{
-    padding: 0px;
-}
-.team .photo1{
-    width: 60%;
-    border-radius: 5px;
-}
-.team .photo2{
-    width: 67%;
-    border-radius: 5px;
-}
-.team .photo3{
-    width: 60%;
-    border-radius: 5px;
-}
-.team .photo4{
-    width: 67%;
-    border-radius: 5px;
-}
 .team .text{
     text-align: justify;
     padding: 5px;
@@ -259,15 +240,191 @@ h4{
     font-size: 24px;
     font-weight: 600;
 }
+.container-t{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /*border: 10px;
+    background-image: url(assets/folded\ paper.png);
+    background-size: cover;*/
+}
+.col-t{
+    display:table-cell;
+    width: 50%;
+    text-align: justify;
+    vertical-align: middle;
+    align-items: center;
+    padding: 1%;
+}
+.col-small{
+    display:table-cell;
+    width: 5%;
+}
+.col-small1{
+    display:table-cell;
+    width: 15%;
+}
+.photo1{
+    width: 75%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+.photo2{
+    width: 75%;
+    border-radius: 5px;
+}
+.photo3{
+    width: 70%;
+    border-radius: 5px;
+}
+.photo4{
+    width: 70%;
+    border-radius: 5px;
+}
+.text{
+    text-align: justify;
+}
+.name{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px;
+}
+.table-row-f{  
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding-inline: 1.5rem;
+}
+.table-row-t{  
+    display:table-row;
+    text-align: center;
+}
 .footer{
     background-color: black;
     color: azure;
+    /*display: flexbox;*/
+    flex-wrap: wrap;
+    align-items: center;
     padding: 5px;
     text-align: center;
-    height: 1.5%;
-}
-.footer table{
     width: 100%;
-    align-items: center;
-    padding: 0;
 }
+.col-bottom-l{
+    display:flex;
+    width: 5%; 
+    text-align: right;
+}
+.col-bottom-m{
+    display: block;
+    width: 30%; 
+    text-align: center; 
+    /*vertical-align: middle;*/
+    padding-left: 10px
+}
+.col-bottom-r{
+    display:block;
+    width: 40%;
+    text-align: center; 
+}
+.col-bottom-r1{
+    display: block;
+    width: 30%; 
+    text-align: center; 
+    /*vertical-align: top;
+    padding-right: 7px;*/
+}
+.col-bottom-r2{
+    display:block;
+    width: 5%; 
+    padding-right: 10px; 
+    text-align: left;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+      }
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+  }
+  @media screen and (max-width: 600px) {
+   
+    .latest{
+        margin-top: 300px;
+    }
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+    .invite{
+        padding-left: 0px;
+        align-items: center;
+    }
+    .slideshow{
+        padding-left: 0;
+    }
+    .publications{
+        width: 100%;
+        align-self: auto;
+    }
+    .table-row-t {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+      }
+    .col-t{ display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .logo{
+        float: none;
+        text-align: left;
+    }
+    .logo p{
+        text-align: center;
+        font-size: 1.1rem
+    }
+    .table-row-f{  
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .col-bottom-m{
+        width: 100%;
+        align-items:center;
+    }
+    .col-bottom-r1{
+        width: 100%;
+        align-items: center;
+    }
+    .col-bottom-r{
+        width: 100%;
+        text-align: center;
+    }
+  }
