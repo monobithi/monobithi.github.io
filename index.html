@@ -7,9 +7,9 @@
         <title>Monobithi - Home</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="actions.js"></script>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
+    <script src="actions.js"></script>
     <body>
         <div class="header">
             <div class="logo">
@@ -27,36 +27,43 @@
             </div>
             
         </div>   
-        <!-- -webkit-columns: 5 200px;
-     -moz-columns: 5 200px;
-      columns: 5 200px;-->
+
         <div class="latest" id="latest">
             <h2>Latest From Our Basket</h2>
         </div>     
         <div class="main" id="main">
             <div class="table-row-t">
-            <div class="col-t">
-                <a href="https://drive.google.com/file/d/1kp9xHbgnT2nCHfZPMT7rO-AO5oxXgQ51/view?usp=sharing">
-                    <img src="assets/CAFE_S24.jpg" class="invite">
-                </a>
+                <div class="col-t">
+                    <a href="https://drive.google.com/file/d/1mP5hKT4fMlcrd8EZJI9xaoh9gYPDQnQl/view?usp=sharing">
+                        <img src="assets/Cover_S24.jpg" class="invite">
+                    </a>
             </div>
            <!--<div class="col-small1"></div>-->
            <div class="col-t">
-            <div class="slideshow">
-                <script src="actions.js"></script>
-                <img class="posters" src="assets/Sharat 23 Cover Insta PR.jpg">
-                <img class="posters" src="assets/Kaler Mondira Poster.jpg">
-                <img class="posters" src="assets/নারায়ণী নমোস্তুতে PR Posters (3).jpg">
-                <img class="posters" src="assets/Clive House Poster.jpg">
-                <img class="posters" src="assets/Shubho Bijoya_Ben.jpg">
-                <img class="posters" src="assets/Shubho Bijoya_Eng.jpg">
-                <img class="posters" src="assets/Lokkhi Chana.jpg">
-                <!--<button class="slide-left" onclick="plusDivs(-1)">&#10094</button>
-                <button class="slide-right" onclick="plusDivs(+1)">&#10095</button>-->     
+            <div class="main-wrapper">
+                <div class="slider-btns">
+                  <span id="prev-btn"><i class="fa-solid fa-chevron-left"></i></span>
+                  <span id="next-btn"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+                <div class="slider-wrapper">
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="slides">
+                        <img class="posters" src="assets/Mrinal Sen.jpg">
+                    </div>
+                    <div class="slides">
+                        <img class="posters" src="assets/Utsab.jpg">
+                    </div>
+                    <div class="slides">
+                        <img class="posters" src="assets/Pratidwandi.jpg">
+                    </div>
+                </div>
             </div>
-        <!--</div>-->
-    </div>
-    <script>
+        </div>
+    <!--<script>
         var myIndex = 0;
         carousel();
         
@@ -70,8 +77,9 @@
           if (myIndex > x.length) {myIndex = 1}    
           x[myIndex-1].style.display = "block";  
           setTimeout(carousel, 5000); // Change image every 2 seconds
-        }
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        }-->
+       
+    <script>
         function myFunction() {
         var x = document.getElementById("testNav");
         if (x.className === "navbar") {
@@ -81,7 +89,86 @@
         }
         }
 
-    </script> 
+    </script>
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const dots = document.querySelectorAll('.dot')
+
+
+        let index = 0;
+
+        // Adding opacity to first dot on first time
+
+        dots[0].style.opacity='1'
+
+        // positioning the slides
+
+        slides.forEach((slide,index)=>{
+        slide.style.left=`${index*100}%`
+        });
+
+
+        // move slide function
+
+        const moveSlide = () =>{
+        slides.forEach((slide)=>{
+            slide.style.transform=`translateX(-${index*100}%)`;
+        });
+        }
+
+        // remove dots opacity 1 from all dots
+
+        const removeDotsOpacity = () =>{
+        dots.forEach((dot)=>{
+            dot.style.opacity='.2';
+        });
+        }
+
+        dots.forEach((dot,i)=>{
+        dot.addEventListener("click",(e)=>{
+            index=i;
+            removeDotsOpacity();
+            e.target.style.opacity='1'
+            moveSlide();
+        })
+        });
+
+        // show the previous slide
+
+        prevBtn.addEventListener('click',()=>{
+        if(index===0) return index;
+        index--;
+        removeDotsOpacity();
+        dots[index].style.opacity='1'
+        moveSlide();
+        });
+
+        // show the next slide
+
+        nextBtn.addEventListener('click',()=>{
+        if(index===slides.length-1) return index;
+        index++;
+        removeDotsOpacity();
+        dots[index].style.opacity='1'
+        moveSlide();
+        });
+
+        // auto play slide
+
+        const autoPlaySlide = () =>{
+        removeDotsOpacity();
+        if(index===slides.length-1) index= -1;
+        index++;
+        dots[index].style.opacity='1'
+        moveSlide();
+        }
+
+        window.onload=()=>{
+        setInterval(autoPlaySlide,6000);
+        }
+    </script>
         </div>   
         </div>
         <div class="about" id="about">
