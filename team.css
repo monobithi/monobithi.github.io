@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Mystery+Quest&family=Snowburst+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Monoton&family=Mystery+Quest&family=Sedan+SC&family=Snowburst+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sancreek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rye&family=Sancreek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+@font-face {
+    font-family: 'Chalk';
+    src: url(fonts/chawp.ttf);
+}
+@font-face {
+    font-family: 'Chalk Board';
+    src: url(fonts/Chalk\ Board.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image: url(assets/team-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+.banner{
+    width: 100%;
+    object-fit: contain;
+}
+.sdb{
+    width: 100%;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+nav{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 3px 3px 5px goldenrod;
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    background-color: goldenrod;
+}
+.fa-envelope{
+    font-size: 20px;
+}
+.fa-instagram{
+    font-size: 20px;
+}
+.fa-youtube{
+    font-size: 20px;
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+.heading{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    font-family: 'Sancreek';
+    font-size: 36px;
+}
+.editor-wrapper{
+    display: flex;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.editor-photo{
+    width: 30%;
+}
+.editor-photo img{
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+    width: 70%;
+}
+.editor-bio{
+    width: 40%;
+    text-align: justify;
+    padding-left: 20px;
+}
+.editor-bio h2{
+    font-family: 'Mea Culpa';
+    font-weight: 400;
+    font-size: 36px;
+}
+.editor-bio p{
+    font-family: 'EB Garamond';
+    font-size: 20px;
+}
+.footer-wrapper{
+    background-image: url(assets/golden-bg.jpg);
+    display: flex;
+    height: 50px;
+}
+.footer-text-1{
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+}
+.footer-text-2{
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+}
+.counter{
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+}
+.counter div{
+    text-align: right;
+    padding-right: 20px;
+}
+.footer-text-1 p{
+    text-align: left;
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: 30px;
+    font-weight: 400;
+    font-style: normal;
+}
+.footer-text-2 p{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: 30px;
+    font-weight: 600;
+    font-style: normal;
+}
+@media(max-width: 600px){
+    .links-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+        background-color: rgba(245, 245, 245, 0.4);
+        box-shadow: -5px 0 5px rgba(218, 165, 32, 0.744);
+        transition: 0.75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        display: block;
+        padding: 30px;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+        backdrop-filter: blur(10px);
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
+@media(max-width: 800px){
+   
+    .editor-wrapper{
+        flex-direction: column;
+    }
+    .editor-photo{
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+    .editor-photo img{
+        width: 80%;
+        margin: auto;
+        
+    }
+    .editor-bio{
+        width: 90%;
+        padding: 0;
+        margin: auto;
+        justify-content: center;
+    }
+    .editor-bio h2{
+        padding-top: 10px;
+        text-align: center;
+    }
+    .footer-wrapper{
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+        padding: 0;
+    }
+    .footer-text-1, .footer-text-2{
+        width: fit-content;
+        padding-top: 10px;
+    }
+    .counter{
+        align-items: center;
+        padding-top: 10px;
+    }
+}

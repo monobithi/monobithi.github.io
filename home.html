@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Monobithi - Home</title>
+        <link rel="icon" type="image/x-icon" href="assets/Monobithi Round Logo.ico">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="banner">
+            <img class="sdb" src="assets/SDB125.png" alt="Saradindu Banner">
+        </div>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Subscribe</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Archive</a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></a></li>
+                <li class="hideOnMobile"><a href="#">Subscribe</a></li>
+                <li class="hideOnMobile"><a href="#">Publications</a></li>
+                <li class="hideOnMobile"><a href="#">Team</a></li>
+                <li class="hideOnMobile"><a href="#">Archive</a></li>
+                <li class="hideOnPC" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+    </body>
+</html>
